@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Files and Image URLs</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Files and Image URLs</h1>
+    
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload File</button>
+    </form>
+    
+    <form action="/addImage" method="POST" enctype="multipart/form-data">
+        <input type="text" name="imageUrl" placeholder="Enter Image URL">
+        <button type="submit">Add Image URL</button>
+    </form>
+
+    <h2>Uploaded Files and Images</h2>
+    
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+}
+
+ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 5%;
+  font-family: "Outfit", sans-serif;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 99;
+  background-color: white;
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
+}
+
+.search-icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0px 10px;
+  align-items: center;
+}
+
+li a {
+  padding: 5px 10px;
+  font-size: 17px;
+}
+
+.search-bar {
+  display: flex;
+  width: 50%;
+  padding-left: 25px;
+  align-items: center;
+  background-color: #e9e9e9;
+  border-radius: 32px;
+  height: 50px;
+}
+
+.nav-icon {
+  margin: 0px 8px;
+  height: 28px;
+  width: 28px;
+}
+
+.nav-icons {
+  margin-left: 10px;
+}
+
+.arrow-icon {
+  width: 32px;
+  height: 32px;
+}
+
+li a:hover {
+  transition: 0.5s;
+  background-color: #111111;
+  color: #e9e9e9;
+  padding: 5px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  border-radius: 40px;
+}
+
+img:hover {
+  filter: brightness(0.7);
+  cursor: pointer;
+}
+
+.grid {
+  text-align: center;
+  max-width: 95vw;
+  margin: 2.5vw auto;
+}
+
+.grid-item {
+  padding: 5px;
+  box-sizing: border-box;
+  display: inline;
+}
+
+@media (min-width: 500px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid-item {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .grid-item {
+    width: 25%;
+  }
+}
+
+@media (min-width: 2100px) {
+  .grid-item {
+    width: 20%;
+  }
+}
+
+        .grid {
+   max-width:1100px;
+  margin: 0 auto;
+  display: grid;
+  grid: auto / repeat(auto-fit,minmax(32%,1fr));
+  grid-gap: 20px;
+  min-height: 200vh;
+}
+.box {
+  position:relative;
+}
+.grid .box:nth-child(even) {
+  grid-row: span 2;
+}
+.box img {
+  border-radius:20px;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+.box-stat {
+    border-radius:20px;
+  position:absolute;
+  background: #00000091;
+  width: 100%;
+  opacity:0;
+  height: 100%;
+  transition:500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.box-stat svg {
+  fill:white;
+  margin: 10px;
+  transition:500ms;
+  cursor:pointer;
+}
+.box-stat svg:hover {
+ filter: drop-shadow(2px 4px 6px white);
+}
+.box:hover .box-stat {
+  opacity:1;
+}
+    </style>
+</head>
+<body>
+  <div class="header">
+  <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-color-icon.png" class="icon pinterest-icon">
+  <ul class="navigation">
+    <li><a href="/home">Home</a></li>
+    <li> <a href="/explore">Explore</a></li>
+    <li> <a href="/create">Create</a></li>
+    <li> <a href="/profile">Profile</a></li>
+  </ul>
+  <div class="search-bar">
+    <img src="https://cdn.pixabay.com/photo/2023/10/24/21/15/nature-8339115_640.jpg" class="search-icon">
+    <input type="text" placeholder="Search">
+  </div>
+  </div>
+    <div class="grid">
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/900" alt="">
+        </div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/800" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/901" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/902" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/903" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/904" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/905" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/900" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/906" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/907" alt=""></div>
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/908" alt=""></div>
+
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/909" alt=""></div>
+      
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/910" alt=""></div>
+   
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/911" alt=""></div>
+     
+        <div class="box">
+          <div class="box-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div>
+          <img src="https://picsum.photos/912" alt=""></div>
+
+    </div>
+</body>
+</html>
