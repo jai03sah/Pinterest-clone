@@ -34,6 +34,15 @@
   right: 32%;
 }
 
+.logout:hover{
+   background-color: black;
+   color: #fff;
+   padding: 5px 5px;
+   right: auto;
+   border-radius: 5px;
+   transition: 0.5s;
+}
+
 </style>
 
   <div class="header">
@@ -48,7 +57,9 @@
       <img src="https://cdn.pixabay.com/photo/2023/10/24/21/15/nature-8339115_640.jpg" class="search-icon">
       <input type="text" placeholder="Search">
     </div>
-    
+    <div>
+      <a href="/logout" class="logout">Logout</a>
+    </div>
     <script>
     function openForm() {
       document.getElementById("myForm").style.display = "block";
